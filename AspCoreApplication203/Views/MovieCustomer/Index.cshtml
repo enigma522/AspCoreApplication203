@@ -1,0 +1,13 @@
+﻿@{
+}
+
+
+<h1>@Model.movie.Name</h1>
+
+<h2>Customers:</h2>
+<ul>
+    @foreach (var customer in Model.Customers)
+    {
+        <li>@Html.ActionLink(customer.Name,"Details",new {Id=customer.Id})</li>
+    }
+</ul>
